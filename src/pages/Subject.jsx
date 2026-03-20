@@ -17,7 +17,9 @@ import Footer from "../components/footer";
 import Swal from "sweetalert2";
 import axios from "axios";
 
-export const API_URL = import.meta.env.VITE_API;
+export const API_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://studentmanagement-blackend.onrender.com";
 
 export default function CourseCRUD() {
   const token = JSON.parse(localStorage.getItem("loginToken")).data;
